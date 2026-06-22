@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── BREADCRUMBS ── */
+.breadcrumbs {
+  padding: 20px 0;
+  font-size: 12px;
+  color: #888880;
+  letter-spacing: 0.5px;
+}
+.breadcrumbs a {
+  color: #888880;
+  text-decoration: none;
+}
+.breadcrumbs a:hover {
+  color: #fff;
+}
+.breadcrumbs span {
+  margin: 0 8px;
+}
+.breadcrumbs .current {
+  color: #fff;
+}
+
+/* ── PRODUCT CONTAINER LAYOUT ── */
+.product-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.product-main-view {
+  display: flex;
+  gap: 60px;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
+/* მარცხენა მხარე - გალერეა */
+.product-gallery {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.main-image-box {
+  background-color: #e4dccf;
+  aspect-ratio: 0.95;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-prod-img {
+  width: 100%;
+  height: 100%;
+  background-image: url("img/cactus1.jpg");
+  background-size: contain;
+  background-position: center;
+}
+.thumbnail-list {
+  display: flex;
+  gap: 10px;
+}
+.thumb-item {
+  width: 50px;
+  height: 50px;
+  background-color: #e4dccf;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.thumb-item:nth-child(1) {
+  background-image: url("img/cactus1.jpg");
+}
+.thumb-item:nth-child(2) {
+  background-image: url("img/cactus2.jpg");
+}
+.thumb-item.active {
+  border-color: #fff;
+}
+
+/* მარჯვენა მხარე - დეტალები */
+.product-details-side {
+  flex: 1;
+  max-width: 480px;
+}
+.product-title {
+  font-family: "Forum", serif;
+  font-size: 42px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+.price-tag {
+  font-size: 18px;
+  color: #c8c4bc;
+  margin-bottom: 32px;
+}
+
+/* ფორმები და ინპუტები */
+.form-group {
+  margin-bottom: 24px;
+}
+.form-group label {
+  display: block;
+  font-size: 12px;
+  color: #c8c4bc;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+#size-select {
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  padding: 12px;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+}
+#size-select option {
+  background: #111;
+}
+
+/* რაოდენობის ასარჩევი */
+.quantity-picker {
+  display: inline-flex;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  align-items: center;
+}
+.qty-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.qty-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+#qty-input {
+  width: 45px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  outline: none;
+}
+#qty-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* კალათაში დამატების ღილაკი */
+.btn-add-to-cart {
+  width: 100%;
+  background: #fff;
+  color: #000;
+  border: 1px solid #fff;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.btn-add-to-cart:hover {
+  background: transparent;
+  color: #fff;
+}
+
+/* ── აკორდეონები (Dropdown) ── */
+.accordion-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.accordion-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.accordion-trigger {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease-out;
+  font-size: 13px;
+  color: #c8c4bc;
+  line-height: 1.6;
+}
+.accordion-item.open .accordion-content {
+  max-height: 120px;
+  padding-bottom: 18px;
+}
+
+/* ── BEST SELLERS СAROUSEL ── */
+.best-sellers-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 60px 40px;
+  text-align: center;
+}
+.section-title {
+  font-family: "Forum", serif;
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.carousel-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+.carousel-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+.carousel-card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.card-img-box {
+  background-color: #e4dccf;
+  aspect-ratio: 0.82;
+  position: relative;
+  overflow: hidden;
+}
+.card-img-box .ph {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ბესტსელერების სურათები */
+.card-img-box .ph.p1 {
+  background-image: url("img/Ficus_lyrata1.jpg");
+}
+.card-img-box .ph.p2 {
+  background-image: url("img/metalpot1.jpg");
+}
+.card-img-box .ph.p3 {
+  background-image: url("img/cereus1.jpg");
+}
+.card-img-box .ph.p4 {
+  background-image: url("img/concretepot.jpg");
+}
+.card-img-box .ph.p5 {
+  background-image: url("img/aokazia_amazonian1.jpg");
+}
+
+.card-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #4a5230;
+  color: #fff;
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+.card-meta {
+  padding: 14px 0 8px 0;
+}
+.card-name {
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.card-price {
+  font-size: 13px;
+  color: #c8c4bc;
+}
+.card-btn {
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  padding: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.card-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Dots (ინდიკატორები) */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 30px;
+}
+.dot {
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dot.active {
+  background: #fff;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 992px) {
+  .product-main-view {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .product-details-side {
+    max-width: 100%;
+  }
+  .carousel-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .carousel-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product-container {
+    padding: 0 16px;
+  }
+}

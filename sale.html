@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sprout — Sale</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Forum&family=Questrial&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="sale.css" />
+  </head>
+  <body>
+    <section>
+      <div class="top-header">
+        <p>Get 15% off your first purchase</p>
+        <a href="#newsletter">Sign Up</a>
+      </div>
+      <header class="header">
+        <nav>
+          <ul class="nav-links desktop-nav">
+            <li><a href="/plants.html">Plants</a></li>
+            <li><a href="pots.html">Pots</a></li>
+            <li>
+              <a href="sale.html">Sale</a>
+            </li>
+            <li><a href="subscriptions.html">Subscriptions</a></li>
+          </ul>
+
+          <div class="logo-cont">
+            <a href="index.html">
+              <img
+                src="https://static.wixstatic.com/shapes/c837a6_5bb979af6e4547baa7cdd9567a0bcd50.svg"
+                alt="Sprout logo"
+              />
+            </a>
+          </div>
+
+          <div class="user-menu">
+            <button type="button" class="login-btn">
+              <i class="fa-solid fa-circle-user"></i>
+              <p>Log In</p>
+            </button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="present-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z"
+              />
+            </svg>
+
+            <a href="" class="cart-link">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="cart-icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                />
+              </svg>
+              <p>Cart 0</p>
+            </a>
+          </div>
+
+          <button
+            type="button"
+            class="burger-menu"
+            id="burgerMenu"
+            aria-label="Open menu"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </nav>
+
+        <div class="nav-overlay" id="navOverlay"></div>
+
+        <div class="mobile-nav" id="mobileNav">
+          <div class="mobile-nav-top">
+            <button type="button" class="login-btn">
+              <i class="fa-solid fa-circle-user"></i>
+              <p>Log In</p>
+            </button>
+            <button
+              type="button"
+              class="close-btn"
+              id="closeMenu"
+              aria-label="Close menu"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <ul>
+            <li><a href="plants.html">Plants</a></li>
+            <li><a href="pots.html">Pots</a></li>
+            <li><a href="sale.html">Sale</a></li>
+            <li><a href="subscriptions.html">Subscriptions</a></li>
+          </ul>
+        </div>
+      </header>
+    </section>
+
+    <div class="shop-layout">
+      <aside class="sidebar" id="sidebar">
+        <button class="sidebar-close" onclick="closeSidebar()">✕</button>
+        <div class="sidebar-section">
+          <div class="sidebar-label">Browse by</div>
+          <ul class="sidebar-links">
+            <li><a href="/allplants.html">All Plants</a></li>
+            <li><a href="newarrival.html">New Arrivals</a></li>
+            <li><a href="plants.html">Plants</a></li>
+            <li><a href="pots.html">Pots</a></li>
+            <li>
+              <a href="sale.html">Sale</a>
+            </li>
+            <li><a href="subscriptions.html">Subscriptions</a></li>
+          </ul>
+        </div>
+
+        <hr class="sidebar-divider" />
+
+        <div class="sidebar-section">
+          <div class="sidebar-label">Filter by</div>
+
+          <div class="filter-row"><span>Price</span><span>−</span></div>
+          <div class="price-range">
+            <input
+              type="range"
+              class="price-slider"
+              min="0"
+              max="100"
+              value="100"
+            />
+            <div class="price-vals"><span>$11</span><span>$100</span></div>
+          </div>
+
+          <div class="filter-row" style="margin-top: 16px">
+            <span>Color</span><span>−</span>
+          </div>
+          <div class="color-swatches">
+            <div class="swatch" style="background: #f5f5f5"></div>
+            <div class="swatch" style="background: #7a2020"></div>
+            <div class="swatch" style="background: #888c94"></div>
+            <div class="swatch" style="background: #c47e3a"></div>
+            <div class="swatch" style="background: #5a5650"></div>
+            <div class="swatch" style="background: #6b1a2a"></div>
+            <div class="swatch active" style="background: #2d6e30"></div>
+            <div class="swatch" style="background: #5b8fa8"></div>
+            <div class="swatch" style="background: #e8e2d0"></div>
+          </div>
+
+          <div class="filter-row" style="margin-top: 20px">
+            <span>Size</span><span>−</span>
+          </div>
+          <div class="size-list">
+            <div class="size-item">
+              <input type="checkbox" id="sz-large" />
+              <label for="sz-large">Large</label>
+            </div>
+            <div class="size-item">
+              <input type="checkbox" id="sz-medium" />
+              <label for="sz-medium">Medium</label>
+            </div>
+            <div class="size-item">
+              <input type="checkbox" id="sz-small" />
+              <label for="sz-small">Small</label>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="product-area">
+        <div class="hero-banner"></div>
+
+        <div class="hero-title-bar">
+          <h1>Sale</h1>
+        </div>
+
+        <div
+          class="sidebar-overlay"
+          id="overlay"
+          onclick="closeSidebar()"
+        ></div>
+
+        <div class="product-toolbar">
+          <button class="filter-toggle" onclick="openSidebar()">
+            ⚙ Filter
+          </button>
+          <span>8 products</span>
+          <select class="sort-select">
+            <option>Sort by: Recommended</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Newest</option>
+          </select>
+        </div>
+
+        <div class="product-grid">
+          <div class="product-card">
+            <div class="product-img">
+              <div class="ph"></div>
+              <div class="badge">Sale</div>
+            </div>
+            <div class="product-info">
+              <div class="product-name">Rhapis Excelsa</div>
+              <div class="product-price">
+                <span class="orig">$28.99</span><span class="sale">$21.99</span>
+              </div>
+            </div>
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <div class="ph"></div>
+              <div class="badge">Sale</div>
+            </div>
+            <div class="product-info">
+              <div class="product-name">Round Pot</div>
+              <div class="product-price">
+                <span class="orig">$22.00</span><span class="sale">$16.50</span>
+              </div>
+            </div>
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <div class="ph"></div>
+              <div class="badge">Sale</div>
+            </div>
+            <div class="product-info">
+              <div class="product-name">Tall Planter</div>
+              <div class="product-price">
+                <span class="orig">$45.00</span><span class="sale">$32.00</span>
+              </div>
+            </div>
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <div class="ph"></div>
+              <div class="badge">Sale</div>
+            </div>
+            <div class="product-info">
+              <div class="product-name">Schefflera Arboricola</div>
+              <div class="product-price">
+                <span class="orig">$32.99</span><span class="sale">$24.74</span>
+              </div>
+            </div>
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <div class="ph"></div>
+              <div class="badge">Sale</div>
+            </div>
+            <div class="product-info">
+              <div class="product-name">Cereus</div>
+              <div class="product-price">
+                <span class="orig">$20.00</span><span class="sale">$15.00</span>
+              </div>
+            </div>
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <div class="ph"></div>
+              <div class="badge">Sale</div>
+            </div>
+            <div class="product-info">
+              <div class="product-name">Flat Pot</div>
+              <div class="product-price">
+                <span class="orig">$18.00</span><span class="sale">$13.50</span>
+              </div>
+            </div>
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <div class="ph"></div>
+              <div class="badge">Sale</div>
+            </div>
+            <div class="product-info">
+              <div class="product-name">Succulent Set</div>
+              <div class="product-price">
+                <span class="orig">$21.99</span><span class="sale">$16.99</span>
+              </div>
+            </div>
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <div class="ph"></div>
+              <div class="badge">Sale</div>
+            </div>
+            <div class="product-info">
+              <div class="product-name">Cactus</div>
+              <div class="product-price">
+                <span class="orig">$24.99</span><span class="sale">$19.99</span>
+              </div>
+            </div>
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="logo-cont">
+        <a href="">
+          <img
+            src="https://static.wixstatic.com/shapes/c837a6_5bb979af6e4547baa7cdd9567a0bcd50.svg"
+            alt="logo"
+          />
+        </a>
+      </div>
+      <div class="info-cont">
+        <ul>
+          <li>Contact</li>
+          <li>Address: 500 Terry</li>
+          <li>Francine Street</li>
+          <li>San Francisco, CA 94158</li>
+          <li>Phone: 123-456-7890</li>
+          <li>Email: info@mysite.com</li>
+        </ul>
+
+        <ul>
+          <li>Shop</li>
+          <li><a href="#">Shop All</a></li>
+          <li><a href="#">Plants</a></li>
+          <li><a href="#">Pots</a></li>
+          <li><a href="#">Sale</a></li>
+          <li><a href="#">Subscriptions</a></li>
+        </ul>
+
+        <ul>
+          <li>Helpful Links</li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Accessibility Statement</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+
+        <ul>
+          <li>Company</li>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+
+        <ul>
+          <li>Opening Hours</li>
+          <li>Mon - Fri: 7am - 10pm</li>
+          <li>Saturday: 8am - 10pm</li>
+          <li>Sunday: 8am - 11pm</li>
+        </ul>
+      </div>
+
+      <p>
+        © 2035 by Sprout. Powered and secured by
+        <a href="https://www.wix.com/">wix</a>
+      </p>
+    </footer>
+
+    <script src="/script.js"></script>
+    <script>
+      function openSidebar() {
+        document.getElementById("sidebar").classList.add("open");
+        document.getElementById("overlay").classList.add("open");
+      }
+      function closeSidebar() {
+        document.getElementById("sidebar").classList.remove("open");
+        document.getElementById("overlay").classList.remove("open");
+      }
+    </script>
+  </body>
+</html>
